@@ -2,6 +2,113 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [100.0.0](https://github.com/matamatanot/smarthr-ui/compare/smarthr-ui-v99.6.0...smarthr-ui-v100.0.0) (2026-09-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **intl:** useIntlから日付フォーマット機能をuseDateFormatに分離 ([#6484](https://github.com/matamatanot/smarthr-ui/issues/6484))
+* **SideNav:** cloneElementを削除しContext APIに移行、interfaceを整理 ([#6400](https://github.com/matamatanot/smarthr-ui/issues/6400))
+* **Th:** decorators propsとuseDecoratorフックを削除 ([#6446](https://github.com/matamatanot/smarthr-ui/issues/6446))
+* **useDevice:** useDeviceフックを削除 ([#6461](https://github.com/matamatanot/smarthr-ui/issues/6461))
+* **FilterDropdown:** iconAltの型をstringに変更 ([#6450](https://github.com/matamatanot/smarthr-ui/issues/6450))
+* **TabItem:** onClickの型をイベントハンドラに変更 ([#6421](https://github.com/matamatanot/smarthr-ui/issues/6421))
+
+### Features
+
+* **AppHeader:** アプリ一覧の遅延読み込みを追加 ([#6899](https://github.com/matamatanot/smarthr-ui/issues/6899)) ([13139e5](https://github.com/matamatanot/smarthr-ui/commit/13139e509d6c805ebee30b5d5ff29be66c439355))
+* **FileViewer:** searchable prop を追加して検索ボックスの表示/非表示を制御できるようにする ([#6798](https://github.com/matamatanot/smarthr-ui/issues/6798)) ([d7acb14](https://github.com/matamatanot/smarthr-ui/commit/d7acb14ae677c89aac566826707ab2eb4a89457c))
+* **FileViewer:** 表示 PDF 内のテキストを検索できる機能を追加 ([#6309](https://github.com/matamatanot/smarthr-ui/issues/6309)) ([61e03b7](https://github.com/matamatanot/smarthr-ui/commit/61e03b7e496f47c62e607e09dbc4928acf2e1bbf))
+* **Icon:** FaArrowsSplitUpAndLeftIconを追加 ([#6890](https://github.com/matamatanot/smarthr-ui/issues/6890)) ([a37391e](https://github.com/matamatanot/smarthr-ui/commit/a37391e1735dad7cf8e7a956f99cf95c8973fe56))
+* **Icon:** FaPasteIconを追加 ([#6871](https://github.com/matamatanot/smarthr-ui/issues/6871)) ([9009034](https://github.com/matamatanot/smarthr-ui/commit/9009034331fc5f43e6efe88348d216a3b97eef72))
+* **Input:** CurrencyInputの数値フォーマット関数をformatNumericStringとして公開 ([#6847](https://github.com/matamatanot/smarthr-ui/issues/6847)) ([ce3db91](https://github.com/matamatanot/smarthr-ui/commit/ce3db91c635adb8433dc85cf93c49f992ca0b20f))
+* **InputFile:** ファイルプレビューに別タブで開くリンクを追加 ([#6958](https://github.com/matamatanot/smarthr-ui/issues/6958)) ([ba08e6f](https://github.com/matamatanot/smarthr-ui/commit/ba08e6ff46a3371c99a8b7b38cc161f33eae9748))
+* **InputFile:** プレビュー機能を追加 ([#6631](https://github.com/matamatanot/smarthr-ui/issues/6631)) ([b551db8](https://github.com/matamatanot/smarthr-ui/commit/b551db8dc30a415bd7d430f8cc3043f33aa1a4c2))
+* **InputFile:** モバイル環境でFilePreviewDialogをフルスクリーンDialogで表示する ([#6778](https://github.com/matamatanot/smarthr-ui/issues/6778)) ([e0d0355](https://github.com/matamatanot/smarthr-ui/commit/e0d03555bf5eb11fc2968813e5d24e40e8ec3cbf))
+* useLatestフックを追加してunstableRefパターンを改善 ([#6483](https://github.com/matamatanot/smarthr-ui/issues/6483)) ([a728adb](https://github.com/matamatanot/smarthr-ui/commit/a728adb695a7efd6a5bc440be3c402871cc0ce93))
+
+
+### Bug Fixes
+
+* **AppHeader:** プラットフォーム固有のpropsがDOM要素に渡る問題を修正 ([#6779](https://github.com/matamatanot/smarthr-ui/issues/6779)) ([9f33263](https://github.com/matamatanot/smarthr-ui/commit/9f332635935b9d195979cb82f9f27a0050fd5d37))
+* **AppHeader:** ヘルプリンクのrel属性をHelpLinkと統一 ([#6508](https://github.com/matamatanot/smarthr-ui/issues/6508)) ([a2aba4d](https://github.com/matamatanot/smarthr-ui/commit/a2aba4dee55311ca9f1868eb4a2586ff60ab6fa7))
+* **Badge:** Badgeにforced-colors時のoutlineを追加 ([#6498](https://github.com/matamatanot/smarthr-ui/issues/6498)) ([8c25031](https://github.com/matamatanot/smarthr-ui/commit/8c250313c892557bb76d5c561e4bd6b1ab013201))
+* **Browser:** classNameが効かない・4カラム以上でレイアウトが崩れる不具合を修正 ([#6894](https://github.com/matamatanot/smarthr-ui/issues/6894)) ([61f7d30](https://github.com/matamatanot/smarthr-ui/commit/61f7d303e8e544235fb26def6e0d29909c2aa261))
+* **CalendarTable:** disabled:をaria-disabled:に変更 ([6b01c0b](https://github.com/matamatanot/smarthr-ui/commit/6b01c0bf699e305387e616c692c825bbe6a29c92))
+* **Checkbox:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6791](https://github.com/matamatanot/smarthr-ui/issues/6791)) ([174aa97](https://github.com/matamatanot/smarthr-ui/commit/174aa97fb2ba8b06c7757f2a4d9836d4913d6074))
+* **Combobox:** ItemButtonの色がiOSで意図しない色になっているのを修正 ([#6512](https://github.com/matamatanot/smarthr-ui/issues/6512)) ([7921b36](https://github.com/matamatanot/smarthr-ui/commit/7921b36233e7b1ce720f063199e34a63b1c5ff27))
+* **Combobox:** スクロール・リサイズ時に選択肢の位置が追従しない問題を修正 ([#6772](https://github.com/matamatanot/smarthr-ui/issues/6772)) ([225cdb6](https://github.com/matamatanot/smarthr-ui/commit/225cdb6550b7197ff1835ebcc5d7c34d12492759))
+* **Combobox:** 画面の右端に寄せて配置した場合にドロップダウンが指定した幅で表示されない問題を修正 ([#6771](https://github.com/matamatanot/smarthr-ui/issues/6771)) ([174ecbf](https://github.com/matamatanot/smarthr-ui/commit/174ecbfd56d7469ca2f4cddd2337cb5dedd222ef))
+* **CurrencyInput:** useImperativeHandle に [] を追加して毎レンダリングの不要な再実行を防止 ([#6796](https://github.com/matamatanot/smarthr-ui/issues/6796)) ([b8e01e1](https://github.com/matamatanot/smarthr-ui/commit/b8e01e12bb615b1cd1d54ae1f6f74b4fb04e9917))
+* **DatePicker:** Enterキー押下時のカレンダー開閉ロジックを修正 ([#6559](https://github.com/matamatanot/smarthr-ui/issues/6559)) ([fb322d6](https://github.com/matamatanot/smarthr-ui/commit/fb322d6a44424756544bc1d6e598c6b3f5909e59))
+* **DatePicker:** useImperativeHandle に [] を追加して毎レンダリングの不要な再実行を防止 ([#6793](https://github.com/matamatanot/smarthr-ui/issues/6793)) ([ee76fa6](https://github.com/matamatanot/smarthr-ui/commit/ee76fa67477ba4c17b2c7516522794a7ca9ec3b4))
+* debounce を使用するコンポーネントで、アンマウント時にタイマーを取り残さずにキャンセルできるようにする ([#6803](https://github.com/matamatanot/smarthr-ui/issues/6803)) ([151c67a](https://github.com/matamatanot/smarthr-ui/commit/151c67a46a271ffbe0205b139e0fdb9e6c541f78))
+* **Dialog:** closeButtonのtext型をオプショナルに変更 ([#6736](https://github.com/matamatanot/smarthr-ui/issues/6736)) ([ee24575](https://github.com/matamatanot/smarthr-ui/commit/ee24575566843b091373661d72426ef090019097))
+* **Dialog:** IME 変換中の Tab がフォーカストラップに奪われないようにする ([#6481](https://github.com/matamatanot/smarthr-ui/issues/6481)) ([6ed79cd](https://github.com/matamatanot/smarthr-ui/commit/6ed79cd79699b2e6efa391a7d5e0453abbb9067c))
+* disabled なトリガーで Dialog・Disclosure が発火しないようにする ([#6497](https://github.com/matamatanot/smarthr-ui/issues/6497)) ([a5bea7f](https://github.com/matamatanot/smarthr-ui/commit/a5bea7f76ee6f31696bbb9d116e363ef4fafb928))
+* **Dropdown:** aria-controlsの参照先要素が存在しない場合があるのを解消 ([#6729](https://github.com/matamatanot/smarthr-ui/issues/6729)) ([ea8a32f](https://github.com/matamatanot/smarthr-ui/commit/ea8a32fa983cd655425c317a7b75a1414920284a))
+* **Dropdown:** Dropdownコンテンツ内のスクロールが動作しない問題を修正 ([#6775](https://github.com/matamatanot/smarthr-ui/issues/6775)) ([74cefbb](https://github.com/matamatanot/smarthr-ui/commit/74cefbb85e0b848032c512844351ab4797281749))
+* **DropdownMenuButton:** IconのaltにReactNodeを直接渡すように修正 ([#6442](https://github.com/matamatanot/smarthr-ui/issues/6442)) ([29f8b31](https://github.com/matamatanot/smarthr-ui/commit/29f8b317fb65b073398f8a1263a38ddcaf95ad47))
+* **DropdownTrigger:** トリガーのdisabled動的切り替え時にメニューが開閉しなくなる問題を修正 ([#6445](https://github.com/matamatanot/smarthr-ui/issues/6445)) ([cc44aa7](https://github.com/matamatanot/smarthr-ui/commit/cc44aa73e77027c2f117f24c6a435962d1d7c83d))
+* DropdownとComboboxにforced-colors時のoutlineを追加 ([#6506](https://github.com/matamatanot/smarthr-ui/issues/6506)) ([acae3fd](https://github.com/matamatanot/smarthr-ui/commit/acae3fdd83440a0791ae57f4a8930df82911fc9c))
+* **Dropdown:** メニュー開放中のスクロール/リサイズでメニュー位置を追従させる ([#6769](https://github.com/matamatanot/smarthr-ui/issues/6769)) ([1fc6c8a](https://github.com/matamatanot/smarthr-ui/commit/1fc6c8a5c2823a633bc0176289f0bb00bc4e8ffd))
+* **DropZone:** className が hidden input ではなく wrapper div に適用されるよう修正 ([#6711](https://github.com/matamatanot/smarthr-ui/issues/6711)) ([7e28958](https://github.com/matamatanot/smarthr-ui/commit/7e28958a0b49e9a0ad4c9102f6a9a661dec62922))
+* **DropZone:** onDrop時にinputのfilesが更新されないのを修正 ([#6439](https://github.com/matamatanot/smarthr-ui/issues/6439)) ([b38d864](https://github.com/matamatanot/smarthr-ui/commit/b38d8643142690efdd66d03c71b7a6197f368027))
+* **DropZone:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6787](https://github.com/matamatanot/smarthr-ui/issues/6787)) ([93c067a](https://github.com/matamatanot/smarthr-ui/commit/93c067a7a3755c75a58a4180aa06c4eccc8c78ba))
+* **Fieldset:** legend変更時にaria-labelへ古いlegend文言が蓄積する不具合を修正 ([#6855](https://github.com/matamatanot/smarthr-ui/issues/6855)) ([7b17e93](https://github.com/matamatanot/smarthr-ui/commit/7b17e93cb523bd9093b4735885b679f03a14acfa))
+* **FileViewer:** onLoadError の引数の型を修正 ([#6637](https://github.com/matamatanot/smarthr-ui/issues/6637)) ([3fbe3d8](https://github.com/matamatanot/smarthr-ui/commit/3fbe3d86130bf88dc7f0853ad0ab04622e4d0ccb))
+* **FileViewer:** レイアウトを調整し親の幅で折り返すよう修正 ([#6753](https://github.com/matamatanot/smarthr-ui/issues/6753)) ([30f1c39](https://github.com/matamatanot/smarthr-ui/commit/30f1c39ddd7f49209cb5b97746190ceecd4099d4))
+* **FocusTrap:** useImperativeHandle に [focus] を追加して不要な再実行を防止 ([#6797](https://github.com/matamatanot/smarthr-ui/issues/6797)) ([c048823](https://github.com/matamatanot/smarthr-ui/commit/c0488233820fac31ddd645ed863bd5f4e1fd20ae))
+* **FormControl:** aria-describedbyのid重複バグを修正 ([#6831](https://github.com/matamatanot/smarthr-ui/issues/6831)) ([25519fc](https://github.com/matamatanot/smarthr-ui/commit/25519fcbb4eb1da762a5e419d29fda72abc50fd0))
+* **FormGroup:** autoBindErrorInput解除後もaria-invalidが残る問題を修正 ([#6892](https://github.com/matamatanot/smarthr-ui/issues/6892)) ([3c1a20d](https://github.com/matamatanot/smarthr-ui/commit/3c1a20db1dc7fc95e794367f78f3a041cc2b565c))
+* **FormGroup:** describedbyIdsの依存を安定させ、errorMessagesの判定漏れを修正する ([#6887](https://github.com/matamatanot/smarthr-ui/issues/6887)) ([1b3ace2](https://github.com/matamatanot/smarthr-ui/commit/1b3ace2b629f476be05057a111099f9ac7f5714d))
+* **InputFile:** FilePreviewDialogのFileViewer周りの余白を除去 ([#6875](https://github.com/matamatanot/smarthr-ui/issues/6875)) ([6e55833](https://github.com/matamatanot/smarthr-ui/commit/6e55833c90b8ed83e3b2d6d63e9deaeb96ffadc6))
+* **InputFile:** previewableでファイル名が長い場合に折り返されない問題を修正 ([#6768](https://github.com/matamatanot/smarthr-ui/issues/6768)) ([277a5f3](https://github.com/matamatanot/smarthr-ui/commit/277a5f3bfd002147911577c3abdb2e6ea3484fa5))
+* **InputFile:** previewable時のアイコン縮小と横方向オーバーフローを修正 ([#6777](https://github.com/matamatanot/smarthr-ui/issues/6777)) ([4a29134](https://github.com/matamatanot/smarthr-ui/commit/4a29134f303a30ab56539c783326390a96e694f0))
+* **InputFile:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6786](https://github.com/matamatanot/smarthr-ui/issues/6786)) ([a17c71c](https://github.com/matamatanot/smarthr-ui/commit/a17c71c7a5fe6ff9cf72caa51117a16e6ca9eba6))
+* **Input:** useImperativeHandle に [] を追加して毎レンダリングの不要な再実行を防止 ([#6795](https://github.com/matamatanot/smarthr-ui/issues/6795)) ([ebdeed9](https://github.com/matamatanot/smarthr-ui/commit/ebdeed9d6dc8de9126bef7bd9d4850b88d4c3b06))
+* **MobileHeader:** 特定条件でのHeaderへのcurrentTenantId・onTenantSelect転送漏れがあったため修正 ([#6873](https://github.com/matamatanot/smarthr-ui/issues/6873)) ([35186fc](https://github.com/matamatanot/smarthr-ui/commit/35186fcfa273850a6b9a134e5749e71781e3bff2))
+* **ModelessDialog:** top/left/right/bottomを開いたときの初期位置として扱う ([#6906](https://github.com/matamatanot/smarthr-ui/issues/6906)) ([d7d1bbe](https://github.com/matamatanot/smarthr-ui/commit/d7d1bbe63d3625d41724d47f627a196219d87b46))
+* **ModelessDialog:** ヘッダーの文字列が長いときの表示崩れを修正する ([#6908](https://github.com/matamatanot/smarthr-ui/issues/6908)) ([aa1b0e8](https://github.com/matamatanot/smarthr-ui/commit/aa1b0e8391ed55c77d092a8577ea43866da1988d))
+* **ModelessDialog:** 中央寄せが不要になった際にcenteringをリセットする ([#6910](https://github.com/matamatanot/smarthr-ui/issues/6910)) ([3ec4f55](https://github.com/matamatanot/smarthr-ui/commit/3ec4f55ec3ae8dabb04e90d0d2dab7955e8071de))
+* **ModelessDialog:** 画面サイズを超えてはみ出す問題を修正 ([#6773](https://github.com/matamatanot/smarthr-ui/issues/6773)) ([12a80c2](https://github.com/matamatanot/smarthr-ui/commit/12a80c2f6289fa29c85c77936ed4c5c4ceafe217))
+* **MultiCombobox:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6790](https://github.com/matamatanot/smarthr-ui/issues/6790)) ([93bc90d](https://github.com/matamatanot/smarthr-ui/commit/93bc90dc9f111cf7841ed19755323cda79ec70ab))
+* **MultiCombobox:** 選択ダイアログのフォーカス状態は色覚異常の方々には分かりづらい ([#6799](https://github.com/matamatanot/smarthr-ui/issues/6799)) ([25747d0](https://github.com/matamatanot/smarthr-ui/commit/25747d04fec30114af093429e3bf4adb1ebfd9a2))
+* **MultiSelectedItem:** disabled:をaria-disabled:に変更 ([1bb19e0](https://github.com/matamatanot/smarthr-ui/commit/1bb19e0c6a92af4f4ff4d95da04a783da1ca3190))
+* MutationObserverの属性監視を追加しbutton要素の動的な属性変更に対応 ([#6458](https://github.com/matamatanot/smarthr-ui/issues/6458)) ([8268597](https://github.com/matamatanot/smarthr-ui/commit/82685974c8eec9c5a5da6148a466b49f07b67e7e))
+* **NotificationBar:** Successの状態のroleをalertからstatusに変更する ([#6902](https://github.com/matamatanot/smarthr-ui/issues/6902)) ([ae675cf](https://github.com/matamatanot/smarthr-ui/commit/ae675cf7cb9c2f0e23e4e00202a17bd808678c33))
+* **PageHeading:** React 18でページタイトルが自動設定されない問題を修正 ([#6738](https://github.com/matamatanot/smarthr-ui/issues/6738)) ([65e76a0](https://github.com/matamatanot/smarthr-ui/commit/65e76a0ca79071cdc2ed88e781b4924054ee35a6))
+* **PageHeading:** useImperativeHandle に [] を追加して毎レンダリングの不要な再実行を防止 ([#6794](https://github.com/matamatanot/smarthr-ui/issues/6794)) ([d835590](https://github.com/matamatanot/smarthr-ui/commit/d835590ab34b8b3159d0de05ca6bc073f0a9534d))
+* pnpm audit --prod の脆弱性検知に対応 ([#6673](https://github.com/matamatanot/smarthr-ui/issues/6673)) ([383cd92](https://github.com/matamatanot/smarthr-ui/commit/383cd929a6e1abb5f7d2629128f4cee85c713bef))
+* **RadioButtonPanel:** aria-describedbyの構築ロジックを修正・リファクタリング ([#6679](https://github.com/matamatanot/smarthr-ui/issues/6679)) ([9778ffe](https://github.com/matamatanot/smarthr-ui/commit/9778ffe7153a1f491756713b627c12f31df5bb06))
+* **RemoteDialogTrigger:** onOpen等のコールバックが状態更新前に発火する不具合を修正 ([#6848](https://github.com/matamatanot/smarthr-ui/issues/6848)) ([4a16d48](https://github.com/matamatanot/smarthr-ui/commit/4a16d486a186ec21144399c772ccebf59305fa84))
+* **RequiredLabel:** 'use client'を削除する ([#6935](https://github.com/matamatanot/smarthr-ui/issues/6935)) ([848f526](https://github.com/matamatanot/smarthr-ui/commit/848f52662cbf6c7b4c2a68defe16d18e4a75292a))
+* **Scroller, DatePicker:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6785](https://github.com/matamatanot/smarthr-ui/issues/6785)) ([497db1a](https://github.com/matamatanot/smarthr-ui/commit/497db1a5066158567cd1dce9df4ca9c911735f4d))
+* **Scroller:** ResizeObserverでの監視とpropsデフォルト値への移行 ([#6405](https://github.com/matamatanot/smarthr-ui/issues/6405)) ([3992da0](https://github.com/matamatanot/smarthr-ui/commit/3992da0c31fc3b89d361e0aa16ade895f9d50f74))
+* **SideNav:** client境界を張る ([#6914](https://github.com/matamatanot/smarthr-ui/issues/6914)) ([27442de](https://github.com/matamatanot/smarthr-ui/commit/27442de3898d4354d2648061db92f9539a352170))
+* **SideNav:** SideNavContextにデフォルト値を設定し型の安全性を向上 ([#6678](https://github.com/matamatanot/smarthr-ui/issues/6678)) ([c12dc7b](https://github.com/matamatanot/smarthr-ui/commit/c12dc7b574414b57fbbf21e7ac33680eca1fb147))
+* **SingleCombobox:** onChangeInputの発火タイミングを修正 ([#6468](https://github.com/matamatanot/smarthr-ui/issues/6468)) ([5e84945](https://github.com/matamatanot/smarthr-ui/commit/5e849453883b680ce04f3b9eb2207611b46dcd84))
+* **SingleCombobox:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6789](https://github.com/matamatanot/smarthr-ui/issues/6789)) ([b43ed74](https://github.com/matamatanot/smarthr-ui/commit/b43ed7456c19f747e26061228013a5563363d08c))
+* **SortDropdown:** 初期値の計算をuseEffectからuseStateの遅延初期化に変更 ([#6635](https://github.com/matamatanot/smarthr-ui/issues/6635)) ([f9ef2c2](https://github.com/matamatanot/smarthr-ui/commit/f9ef2c26c271aa25586438aad2d4000e1ccffb4d))
+* **TabItem:** disabled:をaria-disabled:に変更 ([d5a88cf](https://github.com/matamatanot/smarthr-ui/commit/d5a88cf8f30cec24b91201990d25449bb92d0762))
+* **TabItem:** Server Componentから使うとエラーになる不具合を修正 ([#6948](https://github.com/matamatanot/smarthr-ui/issues/6948)) ([da19d4d](https://github.com/matamatanot/smarthr-ui/commit/da19d4d966cdc7b7be5335be9eee8092be824a50))
+* **TableReel:** 複数行・複数方向の固定列でセル幅変更時に位置が更新されないバグを修正 ([#6801](https://github.com/matamatanot/smarthr-ui/issues/6801)) ([7b6261b](https://github.com/matamatanot/smarthr-ui/commit/7b6261b6abe02d365d280e39101366d070976072))
+* **TdCheckbox/ThCheckbox:** rowSpanとcolSpanが有効にしてTd/Thコンポネントの機能パリティにしました ([#6630](https://github.com/matamatanot/smarthr-ui/issues/6630)) ([a0d9b93](https://github.com/matamatanot/smarthr-ui/commit/a0d9b93aadbfce1e97e2f448fc97b4bd92a26376))
+* **Textarea:** useImperativeHandleに[]を追加して毎レンダリングの不要な再実行を防止 ([#6788](https://github.com/matamatanot/smarthr-ui/issues/6788)) ([0dadf59](https://github.com/matamatanot/smarthr-ui/commit/0dadf591e89152864cc5c53ccd7611cecd527570))
+* **TextLink:** Server Componentとして描画できない問題を修正する ([#6904](https://github.com/matamatanot/smarthr-ui/issues/6904)) ([a901f8d](https://github.com/matamatanot/smarthr-ui/commit/a901f8dda2f4adc2096d2d50e010c990d2f95a23))
+* **Tooltip:** ツールチップを閉じる際にrectをリセット ([#6565](https://github.com/matamatanot/smarthr-ui/issues/6565)) ([6be2087](https://github.com/matamatanot/smarthr-ui/commit/6be20879648f797a2f6eff06d33682d3b0d146ae))
+* **WarekiPicker:** client境界を張る ([#6917](https://github.com/matamatanot/smarthr-ui/issues/6917)) ([38f80ca](https://github.com/matamatanot/smarthr-ui/commit/38f80ca4ebb84a4313a379c4b6e9dd05b58fa401))
+
+
+### Code Refactoring
+
+* **FilterDropdown:** iconAltの型をstringに変更 ([#6450](https://github.com/matamatanot/smarthr-ui/issues/6450)) ([1418770](https://github.com/matamatanot/smarthr-ui/commit/1418770c74c65046ac7ab4a702b90f96426d139f))
+* **intl:** useIntlから日付フォーマット機能をuseDateFormatに分離 ([#6484](https://github.com/matamatanot/smarthr-ui/issues/6484)) ([077d4e7](https://github.com/matamatanot/smarthr-ui/commit/077d4e7c76a4e6805822526008d51b1c0dff5243))
+* **SideNav:** cloneElementを削除しContext APIに移行、interfaceを整理 ([#6400](https://github.com/matamatanot/smarthr-ui/issues/6400)) ([8d39471](https://github.com/matamatanot/smarthr-ui/commit/8d39471dfa81df7427af3c098d92afa0c35d68f7))
+* **TabItem:** onClickの型をイベントハンドラに変更 ([#6421](https://github.com/matamatanot/smarthr-ui/issues/6421)) ([cc56610](https://github.com/matamatanot/smarthr-ui/commit/cc5661017219fe57199e790783e1bb6ebe1960fe))
+* **Th:** decorators propsとuseDecoratorフックを削除 ([#6446](https://github.com/matamatanot/smarthr-ui/issues/6446)) ([565de20](https://github.com/matamatanot/smarthr-ui/commit/565de20d4baa227a4355ae5bd8d6d4b291374410))
+* **useDevice:** useDeviceフックを削除 ([#6461](https://github.com/matamatanot/smarthr-ui/issues/6461)) ([755b5b0](https://github.com/matamatanot/smarthr-ui/commit/755b5b011f8533beb380c8859b6312d0d08c1ca5))
+
 ## [99.6.0](https://github.com/kufu/smarthr-ui/compare/smarthr-ui-v99.5.0...smarthr-ui-v99.6.0) (2026-09-03)
 
 

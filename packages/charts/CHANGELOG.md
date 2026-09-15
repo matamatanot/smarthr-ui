@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [99.6.1](https://github.com/matamatanot/smarthr-ui/compare/smarthr-ui-charts-v0.2.4...smarthr-ui-charts-v99.6.1) (2026-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **charts:** ProgressDoughnutChartの進捗帯の端の既定を角端にする ([#6782](https://github.com/matamatanot/smarthr-ui/issues/6782))
+
+### Features
+
+* **BarChart:** 棒グラフの柄を非表示にできる disablePatterns を追加 ([#6627](https://github.com/matamatanot/smarthr-ui/issues/6627)) ([cb1f00a](https://github.com/matamatanot/smarthr-ui/commit/cb1f00ad54d4f0515cdc93438e051d98247394e8))
+* **Chart:** disablePatterns propsを追加 ([#6828](https://github.com/matamatanot/smarthr-ui/issues/6828)) ([be4870d](https://github.com/matamatanot/smarthr-ui/commit/be4870d75e26a91e53757f7db7bc048866d55016))
+* **charts:** DoughnutChartとProgressDoughnutChartを追加 ([#6480](https://github.com/matamatanot/smarthr-ui/issues/6480)) ([0b0a7a8](https://github.com/matamatanot/smarthr-ui/commit/0b0a7a86798561d5ba629554372fa01d7dbf5ee0))
+* **charts:** peerDependencies に React 18 を追加 ([#6656](https://github.com/matamatanot/smarthr-ui/issues/6656)) ([31571e1](https://github.com/matamatanot/smarthr-ui/commit/31571e15dacfb0035c1bef6ee62250f41df1e765))
+* **charts:** ProgressDoughnutChartの進捗帯の端の既定を角端にする ([#6782](https://github.com/matamatanot/smarthr-ui/issues/6782)) ([18af7bc](https://github.com/matamatanot/smarthr-ui/commit/18af7bcac6dd7b63b0fa7e03ad815502faff10ff))
+* **charts:** 棒グラフに同系色の濃淡で配色するオプションを追加 ([#6933](https://github.com/matamatanot/smarthr-ui/issues/6933)) ([4911f59](https://github.com/matamatanot/smarthr-ui/commit/4911f59da68260e54b3e00e4f726cf82bf81d456))
+* **DoughnutChart:** 柄を無効化するdisablePatternsを追加 ([#6869](https://github.com/matamatanot/smarthr-ui/issues/6869)) ([9b5da35](https://github.com/matamatanot/smarthr-ui/commit/9b5da354e4ee73ef213688979de28bcc52702c16))
+
+
+### Bug Fixes
+
+* **charts:** ProgressDoughnutChartで進捗と残りが両方0のとき何も描画されない ([#6812](https://github.com/matamatanot/smarthr-ui/issues/6812)) ([98c596e](https://github.com/matamatanot/smarthr-ui/commit/98c596e9a0e155a677dfd9ff6102a939f3c548d9))
+* **charts:** smarthr-uiをdevDependenciesにも追加しビルド順序を保証 ([#6870](https://github.com/matamatanot/smarthr-ui/issues/6870)) ([b58edd0](https://github.com/matamatanot/smarthr-ui/commit/b58edd0850ea4b786235512c5933f722174f2264))
+
+
+### Miscellaneous Chores
+
+* リリースバージョンを99.6.1に固定する（再送） ([6efa754](https://github.com/matamatanot/smarthr-ui/commit/6efa754b5be397a74f5893c5f2a6ae222ac20349))
+
 ## [0.2.4](https://github.com/kufu/smarthr-ui/compare/smarthr-ui-charts-v0.2.3...smarthr-ui-charts-v0.2.4) (2026-09-10)
 
 

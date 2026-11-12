@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [99.6.1](https://github.com/matamatanot/smarthr-ui/compare/smarthr-ui-charts-v0.3.1...smarthr-ui-charts-v99.6.1) (2026-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* peerDependenciesのReactサポートを19系のみに変更する ([#7008](https://github.com/matamatanot/smarthr-ui/issues/7008))
+
+### Features
+
+* **BarChart:** StackとHorizontalの機能を追加 ([#7096](https://github.com/matamatanot/smarthr-ui/issues/7096)) ([b3dbd25](https://github.com/matamatanot/smarthr-ui/commit/b3dbd254953301e51c897b23bc5d0abe13f2eb26))
+* **charts:** 棒グラフに同系色の濃淡で配色するオプションを追加 ([#6933](https://github.com/matamatanot/smarthr-ui/issues/6933)) ([4911f59](https://github.com/matamatanot/smarthr-ui/commit/4911f59da68260e54b3e00e4f726cf82bf81d456))
+
+
+### Bug Fixes
+
+* Chart をキーボードで操作したときにページがスクロールされる問題を修正 ([#7103](https://github.com/matamatanot/smarthr-ui/issues/7103)) ([5956417](https://github.com/matamatanot/smarthr-ui/commit/5956417011bcf7577dec29bfd05b68b7eb75ad76))
+* **LineChart:** storiesのimport文にprettierを適用する ([#7401](https://github.com/matamatanot/smarthr-ui/issues/7401)) ([3ce2a43](https://github.com/matamatanot/smarthr-ui/commit/3ce2a43454452c646c8cd496a79367f02b0f3397))
+* peerDependenciesのReactサポートを19系のみに変更する ([#7008](https://github.com/matamatanot/smarthr-ui/issues/7008)) ([0346ec8](https://github.com/matamatanot/smarthr-ui/commit/0346ec8cfe992c17a138bef8fc5aed4e63c66761))
+
+
+### Miscellaneous Chores
+
+* リリースバージョンを99.6.1に固定する（再送） ([6efa754](https://github.com/matamatanot/smarthr-ui/commit/6efa754b5be397a74f5893c5f2a6ae222ac20349))
+
 ## [0.3.1](https://github.com/kufu/smarthr-ui/compare/smarthr-ui-charts-v0.3.0...smarthr-ui-charts-v0.3.1) (2026-10-29)
 
 
